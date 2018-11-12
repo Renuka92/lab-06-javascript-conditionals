@@ -2,11 +2,22 @@
 <html>
 <body>
 <script>
-var number = prompt("Please enter a number")
-console.log (number%1000 + "thousands")
-console.log ("2 hundreds")
-console.log ("5 tens")
-console.log ("6 ones")
+var number = prompt("Please enter a number");
+numOnes=(number%10);
+numNew=((number-numOnes)/10);
+
+numTens=(numNew)%10;
+numNew2=((numNew-numTens)/10);
+
+numHundreds=(numNew2)%10;
+numNew3=((numNew2-numHundreds)/10);
+
+numThousands=(numNew3)%10;
+
+console.log (numThousands + " thousands")
+console.log (numHundreds + " hundreds")
+console.log (numTens + " tens")
+console.log (numOnes + " ones")
 </script>
 </body>
 </html>
